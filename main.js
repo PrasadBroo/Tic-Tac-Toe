@@ -78,38 +78,38 @@ function mainBoss(){
 function winCheckX(){
     if(hh3[0].innerHTML=="X"  && hh3[1].innerHTML=="X" && hh3[2].innerHTML=="X"){
         setTimeout(()=>{alert("X"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[3].innerHTML=="X"  && hh3[4].innerHTML=="X" && hh3[5].innerHTML=="X"){
         setTimeout(()=>{alert("X"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[6].innerHTML=="X"  && hh3[7].innerHTML=="X" && hh3[8].innerHTML=="X"){
         setTimeout(()=>{alert("X"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[0].innerHTML=="X"  && hh3[3].innerHTML=="X" && hh3[6].innerHTML=="X"){
         setTimeout(()=>{alert("X"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[1].innerHTML=="X"  && hh3[4].innerHTML=="X" && hh3[7].innerHTML=="X"){
         setTimeout(()=>{alert("X"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[2].innerHTML=="X"  && hh3[5].innerHTML=="X" && hh3[8].innerHTML=="X"){
         setTimeout(()=>{alert("X"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[0].innerHTML=="X"  && hh3[4].innerHTML=="X" && hh3[8].innerHTML=="X"){
         setTimeout(()=>{alert("X"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[2].innerHTML=="X"  && hh3[4].innerHTML=="X" && hh3[6].innerHTML=="X"){
         setTimeout(()=>{alert("X"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else{
-        return true;
+        return false;
     }
 }
 
@@ -124,30 +124,30 @@ function winCheckO(){
     }
     else if(hh3[6].innerHTML=="O"  && hh3[7].innerHTML=="O" && hh3[8].innerHTML=="O"){
         setTimeout(()=>{alert("O"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[0].innerHTML=="O"  && hh3[3].innerHTML=="O" && hh3[6].innerHTML=="O"){
         setTimeout(()=>{alert("O"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[1].innerHTML=="O"  && hh3[4].innerHTML=="O" && hh3[7].innerHTML=="O"){
         setTimeout(()=>{alert("O"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else if(hh3[2].innerHTML=="O"  && hh3[5].innerHTML=="O" && hh3[8].innerHTML=="O"){
         setTimeout(()=>{alert("O"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
-    else if(hh3[0].innerHTML==botChoice  && hh3[4].innerHTML=="O" && hh3[8].innerHTML=="O"){
+    else if(hh3[0].innerHTML=="O"  && hh3[4].innerHTML=="O" && hh3[8].innerHTML=="O"){
         setTimeout(()=>{alert("O"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
-    else if(hh3[2].innerHTML==botChoice  && hh3[4].innerHTML=="O" && hh3[6].innerHTML=="O"){
+    else if(hh3[2].innerHTML=="O"  && hh3[4].innerHTML=="O" && hh3[6].innerHTML=="O"){
         setTimeout(()=>{alert("O"+" Win");ohGod()},50);
-        return false;
+        return  true;
     }
     else{
-        return true;
+        return false;
     }
 }
 
@@ -155,24 +155,11 @@ function winCheckO(){
 function checkDraw(){
     
     if(hh3[0].innerHTML!="" && hh3[1].innerHTML!="" && hh3[2].innerHTML!="" && hh3[3].innerHTML!="" && hh3[4].innerHTML!="" && hh3[5].innerHTML!="" && hh3[6].innerHTML!="" && hh3[7].innerHTML!="" && hh3[8].innerHTML!=""){
-        if(winCheckX() && winCheckO()){
+        if(!winCheckX() && !winCheckO()){
             setTimeout(()=>{alert("Its draw");ohGod();},50);
         }
         
     } 
-}
-    
-function resetALL(){
-    hh3[0].innerHTML=""  
-    hh3[1].innerHTML="" 
-    hh3[2].innerHTML=""
-    hh3[3].innerHTML=""  
-    hh3[4].innerHTML="" 
-    hh3[5].innerHTML=""
-    hh3[6].innerHTML=""  
-    hh3[7].innerHTML="" 
-    hh3[8].innerHTML=""
-
 }
 
 function ohGod(){
