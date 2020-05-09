@@ -10,7 +10,7 @@ let userPlayed = false;
 let userChoice,botChoice;
 let userName = prompt("Your Good Name?");
 let choices = ["X","O"];
-let winList = [[1, 2, 3],[4, 5, 6],[7, 8, 9],[1, 4, 7],[2, 5, 8],[3, 6, 9],[1, 5, 9],[3, 5, 7]];
+
 
 window.onload = function(){
     nameChanger();
@@ -66,76 +66,84 @@ function mainBoss(){
             else{
                 alert("Opps")
             }
-            winCheck();
-            checkDraw()
+            winCheckX()
+            winCheckO()
+            checkDraw();
+
         });
     }
 }
 
 
-function winCheck(){
-    if(hh3[0].innerHTML==userChoice  && hh3[1].innerHTML==userChoice && hh3[2].innerHTML==userChoice){
-        setTimeout(()=>{alert(userChoice+" Win")},50);
+function winCheckX(){
+    if(hh3[0].innerHTML=="X"  && hh3[1].innerHTML=="X" && hh3[2].innerHTML=="X"){
+        setTimeout(()=>{alert("X"+" Win")},50);
         return true;
     }
-    else if(hh3[3].innerHTML==userChoice  && hh3[4].innerHTML==userChoice && hh3[5].innerHTML==userChoice){
-        setTimeout(()=>{alert(userChoice+" Win")},50);
+    else if(hh3[3].innerHTML=="X"  && hh3[4].innerHTML=="X" && hh3[5].innerHTML=="X"){
+        setTimeout(()=>{alert("X"+" Win")},50);
         return true;
     }
-    else if(hh3[6].innerHTML==userChoice  && hh3[7].innerHTML==userChoice && hh3[8].innerHTML==userChoice){
-        setTimeout(()=>{alert(userChoice+" Win")},50);
+    else if(hh3[6].innerHTML=="X"  && hh3[7].innerHTML=="X" && hh3[8].innerHTML=="X"){
+        setTimeout(()=>{alert("X"+" Win")},50);
         return true;
     }
-    else if(hh3[0].innerHTML==userChoice  && hh3[3].innerHTML==userChoice && hh3[6].innerHTML==userChoice){
-        setTimeout(()=>{alert(userChoice+" Win")},50);
+    else if(hh3[0].innerHTML=="X"  && hh3[3].innerHTML=="X" && hh3[6].innerHTML=="X"){
+        setTimeout(()=>{alert("X"+" Win")},50);
         return true;
     }
-    else if(hh3[1].innerHTML==userChoice  && hh3[4].innerHTML==userChoice && hh3[7].innerHTML==userChoice){
-        setTimeout(()=>{alert(userChoice+" Win")},50);
+    else if(hh3[1].innerHTML=="X"  && hh3[4].innerHTML=="X" && hh3[7].innerHTML=="X"){
+        setTimeout(()=>{alert("X"+" Win")},50);
         return true;
     }
-    else if(hh3[2].innerHTML==userChoice  && hh3[5].innerHTML==userChoice && hh3[8].innerHTML==userChoice){
-        setTimeout(()=>{alert(userChoice+" Win")},50);
+    else if(hh3[2].innerHTML=="X"  && hh3[5].innerHTML=="X" && hh3[8].innerHTML=="X"){
+        setTimeout(()=>{alert("X"+" Win")},50);
         return true;
     }
-    else if(hh3[0].innerHTML==userChoice  && hh3[5].innerHTML==userChoice && hh3[8].innerHTML==userChoice){
-        setTimeout(()=>{alert(userChoice+" Win")},50);
+    else if(hh3[0].innerHTML=="X"  && hh3[5].innerHTML=="X" && hh3[8].innerHTML=="X"){
+        setTimeout(()=>{alert("X"+" Win")},50);
         return true;
     }
-    else if(hh3[2].innerHTML==userChoice  && hh3[5].innerHTML==userChoice && hh3[6].innerHTML==userChoice){
-        setTimeout(()=>{alert(userChoice+" Win")},50);
+    else if(hh3[2].innerHTML=="X"  && hh3[5].innerHTML=="X" && hh3[6].innerHTML=="X"){
+        setTimeout(()=>{alert("X"+" Win")},50);
         return true;
     }
-    else if(hh3[0].innerHTML==botChoice  && hh3[1].innerHTML==botChoice && hh3[2].innerHTML==botChoice){
-        setTimeout(()=>{alert(botChoice+" Win")},50);
+    else{
+        return false;
+    }
+}
+
+function winCheckO(){
+    if(hh3[0].innerHTML=="O"  && hh3[1].innerHTML=="O" && hh3[2].innerHTML=="O"){
+        setTimeout(()=>{alert("O"+" Win")},50);
         return true;
     }
-    else if(hh3[3].innerHTML==botChoice  && hh3[4].innerHTML==botChoice && hh3[5].innerHTML==botChoice){
-        setTimeout(()=>{alert(botChoice+" Win")},50);
+    else if(hh3[3].innerHTML=="O"  && hh3[4].innerHTML=="O" && hh3[5].innerHTML=="O"){
+        setTimeout(()=>{alert("O"+" Win")},50);
         return true;
     }
-    else if(hh3[6].innerHTML==botChoice  && hh3[7].innerHTML==botChoice && hh3[8].innerHTML==botChoice){
-        setTimeout(()=>{alert(botChoice+" Win")},50);
+    else if(hh3[6].innerHTML=="O"  && hh3[7].innerHTML=="O" && hh3[8].innerHTML=="O"){
+        setTimeout(()=>{alert("O"+" Win")},50);
         return true;
     }
-    else if(hh3[0].innerHTML==botChoice  && hh3[3].innerHTML==botChoice && hh3[6].innerHTML==botChoice){
-        setTimeout(()=>{alert(botChoice+" Win")},50);
+    else if(hh3[0].innerHTML=="O"  && hh3[3].innerHTML=="O" && hh3[6].innerHTML=="O"){
+        setTimeout(()=>{alert("O"+" Win")},50);
         return true;
     }
-    else if(hh3[1].innerHTML==botChoice  && hh3[4].innerHTML==botChoice && hh3[7].innerHTML==botChoice){
-        setTimeout(()=>{alert(botChoice+" Win")},50);
+    else if(hh3[1].innerHTML=="O"  && hh3[4].innerHTML=="O" && hh3[7].innerHTML=="O"){
+        setTimeout(()=>{alert("O"+" Win")},50);
         return true;
     }
-    else if(hh3[2].innerHTML==botChoice  && hh3[5].innerHTML==botChoice && hh3[8].innerHTML==botChoice){
-        setTimeout(()=>{alert(botChoice+" Win")},50);
+    else if(hh3[2].innerHTML=="O"  && hh3[5].innerHTML=="O" && hh3[8].innerHTML=="O"){
+        setTimeout(()=>{alert("O"+" Win")},50);
         return true;
     }
-    else if(hh3[0].innerHTML==botChoice  && hh3[5].innerHTML==botChoice && hh3[8].innerHTML==botChoice){
-        setTimeout(()=>{alert(botChoice+" Win")},50);
+    else if(hh3[0].innerHTML==botChoice  && hh3[5].innerHTML=="O" && hh3[8].innerHTML=="O"){
+        setTimeout(()=>{alert("O"+" Win")},50);
         return true;
     }
-    else if(hh3[2].innerHTML==botChoice  && hh3[5].innerHTML==botChoice && hh3[6].innerHTML==botChoice){
-        setTimeout(()=>{alert(botChoice+" Win")},50);
+    else if(hh3[2].innerHTML==botChoice  && hh3[5].innerHTML=="O" && hh3[6].innerHTML=="O"){
+        setTimeout(()=>{alert("O"+" Win")},50);
         return true;
     }
     else{
@@ -147,8 +155,8 @@ function winCheck(){
 function checkDraw(){
     
     if(hh3[0].innerHTML!="" && hh3[1].innerHTML!="" && hh3[2].innerHTML!="" && hh3[3].innerHTML!="" && hh3[4].innerHTML!="" && hh3[5].innerHTML!="" && hh3[6].innerHTML!="" && hh3[7].innerHTML!="" && hh3[8].innerHTML!=""){
-        if(!winCheck){
-            alert("Its draw");
+        if(!winCheckX() && !winCheckO()){
+            setTimeout(()=>{alert("Its draw");},50);
         }
         
     } 
