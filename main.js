@@ -12,7 +12,7 @@ let userName = prompt("Your Good Name?");
 let choices = ["X","O"];
 
 
-window.onload = function(){
+window.onload = function (){
     nameChanger();
     randomChoice();
     choiceMaker();
@@ -63,9 +63,7 @@ function mainBoss(){
                 hh3[i].innerHTML=botChoice;
                 userPlayed=false;
             }
-            else{
-                alert("Opps")
-            }
+            
             winCheckX()
             winCheckO()
             checkDraw()
@@ -163,5 +161,17 @@ function checkDraw(){
 }
 
 function ohGod(){
-    location.reload();
+    hh3[0].innerHTML="";
+    hh3[1].innerHTML="";
+    hh3[2].innerHTML="";
+    hh3[3].innerHTML=""; 
+    hh3[4].innerHTML=""; 
+    hh3[5].innerHTML=""; 
+    hh3[6].innerHTML=""; 
+    hh3[7].innerHTML=""; 
+    hh3[8].innerHTML="";
+    randomChoice();
+    choiceMaker();
+    userPlayed=false;
+
 }
