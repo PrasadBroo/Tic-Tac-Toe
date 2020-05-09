@@ -138,11 +138,11 @@ function winCheckO(){
         setTimeout(()=>{alert("O"+" Win");ohGod()},50);
         return false;
     }
-    else if(hh3[0].innerHTML==botChoice  && hh3[5].innerHTML=="O" && hh3[8].innerHTML=="O"){
+    else if(hh3[0].innerHTML==botChoice  && hh3[4].innerHTML=="O" && hh3[8].innerHTML=="O"){
         setTimeout(()=>{alert("O"+" Win");ohGod()},50);
         return false;
     }
-    else if(hh3[2].innerHTML==botChoice  && hh3[5].innerHTML=="O" && hh3[6].innerHTML=="O"){
+    else if(hh3[2].innerHTML==botChoice  && hh3[4].innerHTML=="O" && hh3[6].innerHTML=="O"){
         setTimeout(()=>{alert("O"+" Win");ohGod()},50);
         return false;
     }
